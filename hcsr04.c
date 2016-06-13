@@ -22,7 +22,7 @@ int main()
 	prussdrv_map_prumem(PRUSS0_PRU0_DATARAM, &pru0_memory);
 	pru0_memory_uint = (unsigned int*)pru0_memory;
 
-	prussdrv_exec_program(0, "./hcsr04.bin");
+	prussdrv_exec_program(0, "/lib/firmware/pru-hcsr04/hcsr04.bin");
 
 	n = prussdrv_pru_wait_event(PRU_EVTOUT_0);
 	distance_samples = *pru0_memory_uint;
